@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollytelling Portfolio Test</title>
+    <meta
+      name="description"
+      content="A spec-driven scrollytelling mini portfolio showing process, story, and linked content pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#slide-1" class="brand">Spec-Driven Scrolly</a>
+      <nav>
+        <a href="why-this-project.html?returnTo=%2F%23slide-1">Why This Project</a>
+        <a href="process-notes.html?returnTo=%2F%23slide-1">Process Notes</a>
+      </nav>
+    </header>
+
+    <main class="scrolly" id="top">
+      <aside class="stage" aria-live="polite">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="stage-card" id="stageCard">
+          <p class="eyebrow" id="stageTag">Slide 1</p>
+          <h2 id="stageTitle">From Random Prompting to a Controlled Build</h2>
+          <p id="stageText">
+            This prototype shows the story of moving from ad-hoc AI outputs to a
+            spec-driven workflow that can scale to larger projects.
+          </p>
+        </div>
+      </aside>
+
+      <article class="story">
+        <section class="step active" id="slide-1" data-tag="Slide 1" data-title="From Random Prompting to a Controlled Build" data-text="This prototype shows the story of moving from ad-hoc AI outputs to a spec-driven workflow that can scale to larger projects.">
+          <h1>Scrollytelling + Spec-Driven Development</h1>
+          <p>
+            I used this page as a small field test: can a clear process improve
+            quality in one short build session? The answer was yes.
+          </p>
+        </section>
+
+        <section class="step" id="slide-2" data-tag="Slide 2" data-title="Write the Target Before Writing the Code" data-text="I created lightweight specs first: goals, page map, visual language, and interaction behavior. That reduced drift and rework.">
+          <h2>1. Define Before Generate</h2>
+          <p>
+            Instead of asking AI to "make a cool site," I wrote requirements in
+            small, testable chunks. This made every output reviewable.
+          </p>
+        </section>
+
+        <section class="step" id="slide-3" data-tag="Slide 3" data-title="Build in Small Phases" data-text="Work moved in phases: foundation, homepage scrolly, then content pages. Each phase had clear exit checks.">
+          <h2>2. Phase the Work</h2>
+          <p>
+            Phases kept the scope small enough to verify. I could stop drift early
+            and keep momentum instead of rewriting everything later.
+          </p>
+        </section>
+
+        <section class="step" id="slide-4" data-tag="Slide 4" data-title="Use Story to Guide Attention" data-text="The sticky visual stage and step-by-step narrative make the page feel intentional and easier to follow than a flat portfolio layout.">
+          <h2>3. Use the Scroll as Narrative</h2>
+          <p>
+            The page tells a sequence, not just a list. Visitors move through a
+            point of view, then branch into detailed content pages.
+          </p>
+        </section>
+
+        <section class="step" id="slide-5" data-tag="Slide 5" data-title="Branch to Regular Pages" data-text="The links below open normal content pages, still connected to the main storyline through return links and shared visual system.">
+          <h2>4. Extend the Technique</h2>
+          <p>
+            This is where scrollytelling becomes practical: use it for the top-level
+            story, then route into deeper pages when readers need specifics.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="why-this-project.html?returnTo=%2F%23slide-1">Open Why This Project</a>
+            <a class="btn alt" href="process-notes.html?returnTo=%2F%23slide-1">Open Process Notes</a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built as a small test project for spec-driven scrollytelling.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

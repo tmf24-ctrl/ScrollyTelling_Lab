@@ -1,0 +1,231 @@
+:root {
+  --bg: #f6f1e8;
+  --bg-2: #e5dccd;
+  --ink: #1f2a2e;
+  --accent: #b84e2c;
+  --accent-2: #0d6b63;
+  --card: rgba(255, 255, 255, 0.78);
+  --line: rgba(31, 42, 46, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% 15%, #fff4dc 0%, transparent 40%),
+    radial-gradient(circle at 85% 10%, #d0efe8 0%, transparent 35%),
+    linear-gradient(170deg, var(--bg), var(--bg-2));
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  backdrop-filter: blur(8px);
+  background: rgba(246, 241, 232, 0.7);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: "Fraunces", serif;
+  letter-spacing: 0.02em;
+}
+
+.scrolly {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.stage {
+  position: sticky;
+  top: 5.7rem;
+  align-self: start;
+  height: calc(100vh - 7rem);
+  min-height: 420px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: linear-gradient(130deg, #f9e8d4, #d9efe7 45%, #f2e9dc 100%);
+}
+
+.stage-card {
+  position: absolute;
+  inset: auto 1.25rem 1.25rem 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  animation: rise 500ms ease;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin: 0 0 0.5rem;
+  color: var(--accent-2);
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+}
+
+.story {
+  display: grid;
+  gap: 32vh;
+  padding-bottom: 28vh;
+}
+
+.step {
+  min-height: 74vh;
+  border-left: 3px solid transparent;
+  padding: 1rem 1rem 1rem 1.1rem;
+  max-width: 44ch;
+  opacity: 0.55;
+  transform: translateY(18px);
+  transition: opacity 260ms ease, transform 260ms ease, border-color 260ms ease;
+}
+
+.step.active {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: var(--accent);
+}
+
+.step p {
+  line-height: 1.7;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.btn.alt {
+  background: var(--accent-2);
+}
+
+.site-footer {
+  padding: 2.2rem 1.2rem 2.8rem;
+  text-align: center;
+  color: rgba(31, 42, 46, 0.75);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(2px);
+  opacity: 0.85;
+}
+
+.orb-one {
+  width: 230px;
+  height: 230px;
+  top: 12%;
+  left: 7%;
+  background: radial-gradient(circle at 30% 35%, #fcf0a9, #eb9c58 70%);
+  animation: drift 9s ease-in-out infinite;
+}
+
+.orb-two {
+  width: 280px;
+  height: 280px;
+  right: -30px;
+  top: 35%;
+  background: radial-gradient(circle at 35% 30%, #8dd4bd, #1d8f84 75%);
+  animation: drift 11s ease-in-out infinite reverse;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(8deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .scrolly {
+    grid-template-columns: 1fr;
+  }
+
+  .stage {
+    position: relative;
+    top: 0;
+    height: 360px;
+    min-height: auto;
+  }
+
+  .story {
+    gap: 12vh;
+    padding-bottom: 12vh;
+  }
+
+  .step {
+    min-height: auto;
+    max-width: 100%;
+  }
+}

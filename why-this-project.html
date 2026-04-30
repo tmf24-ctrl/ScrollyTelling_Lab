@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why This Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="content.css" />
+  </head>
+  <body>
+    <header class="page-top">
+      <a id="returnLink" href="index.html#slide-1">Return to Story</a>
+      <a href="process-notes.html?returnTo=%2F%23slide-5">Process Notes</a>
+    </header>
+
+    <main class="content-wrap">
+      <section class="hero">
+        <p class="kicker">Context</p>
+        <h1>Why I Built This Scrollytelling Test</h1>
+        <p>
+          This page is the branch from the homepage story. It explains the purpose,
+          decisions, and what changed when I switched to spec-driven development.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article>
+          <h2>Problem</h2>
+          <p>
+            AI can generate code quickly, but without constraints it produces drift:
+            inconsistent styling, unclear structure, and fragile behavior.
+          </p>
+        </article>
+        <article>
+          <h2>Approach</h2>
+          <p>
+            I used a lightweight spec stack: write requirements, split into phases,
+            implement in order, and verify each phase before moving on.
+          </p>
+        </article>
+        <article>
+          <h2>Result</h2>
+          <p>
+            The output became cleaner and easier to review. The homepage, content
+            pages, and docs all align because they came from one process.
+          </p>
+        </article>
+      </section>
+
+      <section class="timeline" aria-label="Narrative timeline">
+        <div class="timeline-step"><strong>Step 1:</strong> Define the story arc.</div>
+        <div class="timeline-step"><strong>Step 2:</strong> Specify page roles and links.</div>
+        <div class="timeline-step"><strong>Step 3:</strong> Implement one phase at a time.</div>
+        <div class="timeline-step"><strong>Step 4:</strong> Validate behavior and polish.</div>
+      </section>
+    </main>
+
+    <script src="content.js"></script>
+  </body>
+</html>

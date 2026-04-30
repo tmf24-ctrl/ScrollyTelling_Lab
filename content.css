@@ -1,0 +1,133 @@
+:root {
+  --bg: #fbf7ee;
+  --ink: #1d292d;
+  --line: rgba(29, 41, 45, 0.17);
+  --accent: #b84e2c;
+  --accent-2: #0d6b63;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at 0% 0%, #fff8eb 0%, transparent 30%),
+    radial-gradient(circle at 100% 100%, #dff1e8 0%, transparent 30%), var(--bg);
+}
+
+.page-top {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(251, 247, 238, 0.82);
+  backdrop-filter: blur(7px);
+}
+
+.page-top a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.hero {
+  padding: 2rem 0.2rem 1rem;
+  animation: fadeUp 500ms ease;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0.5rem 0;
+}
+
+.hero p {
+  max-width: 60ch;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.2rem 0 2rem;
+}
+
+.grid article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.grid p {
+  line-height: 1.6;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.8rem 0 2.6rem;
+}
+
+.timeline-step {
+  border-left: 4px solid var(--accent);
+  padding: 0.55rem 0.8rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.checklist {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.checklist li {
+  margin-bottom: 0.45rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
